@@ -1,0 +1,13 @@
+{
+  "name" : "seq_ORGANIZATION_CONTACT_ROLE_KEY",
+  "description" : "Re-usable Sequence Generator pushed from PC to ICS",
+  "startValue" : "0",
+  "endValue" : "9223372036854775807",
+  "currentValue" : "761001",
+  "initialValue" : "761001",
+  "incrementBy" : "1",
+  "cachedValues" : "1000",
+  "cyclic" : false,
+  "resetToInitial" : false,
+  "vcsExportTime" : "2025-11-18 01:28:02 PST"
+}

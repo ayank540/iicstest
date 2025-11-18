@@ -1,0 +1,53 @@
+{
+  "objectInfo" : {
+    "id" : "7OP4T5HkicplKZH0WrNouC",
+    "name" : "m_CSC_IQS_G_ORGANIZATION_CONTACT_ROLE_T1",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01110V170000000037VG"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "\nConverted using O2N Version: O2N : Framesh1ft Tool V3.03",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-11-18T09:28:03.990Z",
+  "objectRefs" : [ {
+    "id" : "kEBI1t0GDasdrcEQumxWYB",
+    "name" : "seq_ORGANIZATION_CONTACT_ROLE_KEY",
+    "type" : "SequenceGenerator",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01110V420000000004PC"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Re-usable Sequence Generator pushed from PC to ICS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/_Ayan_Demo/Shared_LTC"
+  } ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

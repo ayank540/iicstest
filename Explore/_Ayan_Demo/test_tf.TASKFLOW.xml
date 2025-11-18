@@ -1,0 +1,201 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>tJYKqUlLnzYLnzY-gt-1674909-2024-03-11T09:49:08.309Z::tf.xml</types1:EntryId>
+      <types1:Name>test_tf-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>mohakhan_icinq</types1:CreatedBy>
+      <types1:CreationDate>2024-03-11T09:49:08Z</types1:CreationDate>
+      <types1:ModifiedBy>mohakhan_icinq</types1:ModifiedBy>
+      <types1:ModificationDate>2024-07-31T15:51:41Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>mohakhan_icinq</types1:PublishedBy>
+      <types1:PublicationDate>2024-05-20T09:00:05Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.test_tf-1/test_tf-1.tf.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="test_tf"
+                   name="test_tf-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd">test_ak.param</parameterSet>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description=""
+                          name="InputMappingTaskParameterFileDir"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">
+                        <expression language="XQuery">'C:\ayan\dev\Param_Files'</expression>
+                     </option>
+                     <option name="source">formula</option>
+                  </options>
+               </parameter>
+               <parameter description=""
+                          name="InputMappingTaskParameterFileName"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">
+                        <expression language="XQuery">'folder_test.txt'</expression>
+                     </option>
+                     <option name="source">formula</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="workflowStartTime" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="inputFileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="Data Task 1" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:test-MappingTask-2LDL2dhDLlchCH0j4WJBYq</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">false</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="lty53obj" targetId="lty53obi"/>
+               </start>
+               <assignment id="lty53obi">
+                  <title>Assignment 1</title>
+                  <operation source="constant" to="input.InputMappingTaskParameterFileDir">C:/ayan/dev/Param_Files</operation>
+                  <operation source="constant" to="input.InputMappingTaskParameterFileName">folder_test.txt</operation>
+                  <operation source="formula" to="input.workflowStartTime">
+                     <expression language="XQuery">date:toChar(xs:dateTime(util:getInstanceStartTime()), 'YYYY-MM-DD HH24:MI:SS')</expression>
+                  </operation>
+                  <operation source="constant" to="input.inputFileName">ayan_test.txt</operation>
+                  <link id="lza05vjn" targetId="lza05vjr"/>
+               </assignment>
+               <eventContainer id="lza05vjr">
+                  <service id="lza05vjm">
+                     <title>Data Task 1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">test_MappingTask</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">2LDL2dhDLlchCH0j4WJBYq</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="test-MappingTask-2LDL2dhDLlchCH0j4WJBYq">temp.Data Task 1</operation>
+                           <operation objName="Source[1]"
+                                      source="constant"
+                                      to="test-MappingTask-2LDL2dhDLlchCH0j4WJBYq/input[1]/source[1]/Source[1]/connection"/>
+                           <operation objName="Source[1]"
+                                      source="constant"
+                                      to="test-MappingTask-2LDL2dhDLlchCH0j4WJBYq/input[1]/source[1]/Source[1]/connectionGUID"/>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Data Task 1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Data Task 1/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Data Task 1/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.Data Task 1/inout/myfilename">myfilename</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lza05vjo" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="lza05vjp"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="lza05vjq"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="test-MappingTask-2LDL2dhDLlchCH0j4WJBYq"
+                              isByCopy="true"
+                              name="test-MappingTask-2LDL2dhDLlchCH0j4WJBYq">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>6O28wakvM4FhPbrzKYvVSw</types1:GUID>
+      <types1:DisplayName>test_tf</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-11-18T09:28:03.357Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

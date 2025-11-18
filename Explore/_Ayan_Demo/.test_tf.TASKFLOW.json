@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "6O28wakvM4FhPbrzKYvVSw",
+    "name" : "test_tf",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "tJYKqUlLnzYLnzY-gt-1674909-2024-03-11T09:49:08.309Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-11-18T09:28:03.987Z",
+  "objectRefs" : [ {
+    "id" : "2LDL2dhDLlchCH0j4WJBYq",
+    "name" : "test_MappingTask",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01110V0Z000000002YAD"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "INVALID"
+      }
+    },
+    "path" : "/Explore/_Ayan_Demo"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

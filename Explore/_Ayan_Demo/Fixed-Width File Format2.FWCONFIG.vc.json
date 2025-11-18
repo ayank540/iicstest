@@ -1,0 +1,25 @@
+{
+  "name" : "Fixed-Width File Format2",
+  "lineSequential" : true,
+  "padBytes" : 0,
+  "skipRows" : 0,
+  "nullChar" : "*",
+  "nullCharType" : "ASCII",
+  "repeatNullChar" : false,
+  "stripTrailingBlank" : false,
+  "columns" : [
+    {
+      "name" : "COLUMN_0",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    },
+    {
+      "name" : "CurrentlyProcessedFileName",
+      "nativeType" : "string",
+      "precision" : 1,
+      "scale" : 0
+    }
+  ],
+  "vcsExportTime" : "2025-11-18 01:28:02 PST"
+}
